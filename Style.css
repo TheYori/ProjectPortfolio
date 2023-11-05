@@ -1,0 +1,130 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background: #9C1FAA;
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	color: white;
+	
+}
+
+img{
+	height: 100px;
+}
+
+.top-bar{
+	background: #323030;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px;
+	height: 100px;
+}
+
+.menu{
+	display: flex;
+	list-style-type: none;
+}
+
+li{
+	padding: 20px;
+	overflow: hidden;
+}
+
+.box{
+	height: 100%;
+	width: 30px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.icon, .icon::before, .icon::after{
+	display: block;
+	background: white;
+	height: 4px;
+	width: 30px;
+	border-radius: 2px;
+	position: absolute;
+	transition: transform 400ms;
+}
+
+.icon::before{
+	content:"";
+	margin-top: -8px;
+}
+
+.icon::after{
+	content:"";
+	margin-top: 8px;
+}
+
+#activate:checked + .box .icon::before{
+	margin-top: 0;
+	transform: rotate(405deg);
+}
+
+#activate:checked + .box .icon::after{
+	margin-top: 0;
+	transform: rotate(-405deg);
+}
+
+#activate:checked + .box .icon{
+	background: rgba(80,79,79,0)
+}
+
+#activate{
+	display: none;
+}
+
+.box{
+	display: none;
+}
+
+@media screen and (max-width: 700px){
+	.box{
+		display: flex;
+	}
+	
+	.menu{
+	position: absolute;
+	top: 0;
+	left: 0px;
+	margin-top: 115px;
+	flex-direction: column;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu li{
+	background: #323030;
+	border: 1px solid white;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+#activate ~ .menu li {
+	height: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	transition: height 400ms;
+}
+
+#activate:checked ~ .menu li{
+	transition: height 400ms;
+	height: 45px;
+	border: 1px solid white;
+	padding: 15px;
+}
+}
+
