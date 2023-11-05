@@ -1,8 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
 
+html{
+	height: 100%;
+}
+
 body{
-	background: #9C1FAA;
+	height: 100%;
+	margin: 0;
+	background: rgb(190,50,237);
+	background: linear-gradient(0deg, rgba(190,50,237,1) 5%, rgba(180,47,224,1) 15%, rgba(160,42,199,1) 30%, rgba(129,34,161,1) 40%, rgba(84,22,105,1) 75%, rgba(84,22,105,1) 100%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	
 }
 
 *{
@@ -18,7 +28,7 @@ img{
 }
 
 .top-bar{
-	background: #323030;
+	/*background: #323030; */
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
