@@ -8,19 +8,31 @@
 
 <body>
 <nav class="top-bar">
-		<div>
-     <img src="Pictures/Logo/99494ddb-670a-4de0-b97e-002d75d4326a.png" alt=""/></div>
-	
+	<div class="logo"><a href="index.html"><img src="Pictures/Logo/LogoWithText.png" alt="Logo"/></a></div>
 	<input id="activate" type="checkbox"/>
 	<label class="box" for="activate">
-	<div class="icon"></div>
+		<div class="icon"></div>
 	</label>
 	
 	<ul class="menu">
-		<li>HOME</li>
-		<li>PROJECTS</li>
-		<li>CONTACT</li>
+		<a href="index.html"><li id="top-element">HOME</li></a>
+		<a href="about.html"><li id="middle-element">ABOUT</li></a>
+		<a href="contact.html"><li id="bottom-element">CONTACT</li></a>
 	</ul>
-	</nav>
+</nav>
+
+<div class="rows">
+	<div class="category-one" style="flex-grow: 1">
+    <a href="books.html"><img class="category-picture" src="Pictures/Categories/Book.png" alt="Book category"/> </a>
+	</div>
+  	<div class="category-two" style="flex-grow: 1">
+	<a href="drawings.html"><img class="category-picture" src="Pictures/Categories/Drawing.png" alt="Drawings Categoy"/></a>	
+  	</div>
+	<div class="category-three" style="flex-grow: 1">
+	<a href="blender.html"><img class="category-picture" src="Pictures/Categories/Blender.png" alt="Blender Category"/></a>
+  	</div>
+</div>
+
+
 </body>
 </html>
