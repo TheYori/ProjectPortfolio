@@ -2,11 +2,38 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Contact</title>
+<title>Menu</title>
 <link href="Style.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.google.com/specimen/Dangrek" rel="stylesheet">
+<link href="https://fonts.google.com/specimen/Montserrat" rel="stylesheet">
 </head>
 
 <body>
-	<h1>Contact</h1>
+	<nav class="top-bar">
+		<div class="logo"><a href="index.html"><img src="Pictures/Logo/LogoWithText.png" alt="Logo"/></a></div>
+		<input id="activate" type="checkbox"/>
+		<label class="box" for="activate">
+			<div class="icon"></div>
+		</label>
+	
+		<ul class="menu">
+			<a href="index.html"><li class="pages" id="top-element"><h1>HOME</h1></li></a>
+			<a href="about.html"><li class="pages" id="middle-element"><h1>ABOUT</h1></li></a>
+			<a href="contact.html"><li class="pages" id="bottom-element"><h1>CONTACT</h1></li></a>
+		</ul>
+	</nav>
+	
+	<form class="form">
+		<p>First name:</p>
+		<input class="f-name" type="text" placeholder="Your name...">
+		<br><br>
+		<p>First name:</p>
+		<input class="l-name" type="text" placeholder="Your name...">
+		<br><br>
+		<p>Your message:</p>
+		<textarea class="m-text" rows="12" cols="100" name="comment" form="utf-8" placeholder="Message..."></textarea>
+	</form>
+	
+	<a><div class="send-button">Send Message</div></a>
 </body>
 </html>

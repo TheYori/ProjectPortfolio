@@ -5,7 +5,7 @@ html{
 	height: 100%;
 }
 
-body{
+body{ /*Background setup. Such as colours & height of site*/
 	height: 100%;
 	margin: 0;
 	background: rgb(190,50,237);
@@ -15,23 +15,25 @@ body{
 	
 }
 
-*{
+*{ /*General design that is used throughout the whole portfolio*/
 	margin: 0px;
 	padding: 0px;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	/*font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";*/
+	Font-family:"Montserrat", sans-serif;
+
 	color: white;
 	box-sizing: border-box;
 	
 }
 
-/*---HEADER (Logo and menu)---*/
-.logo img{
-	height: 120px;
+
+.logo img{ /*---HEADER (Logo)---*/
+	height: 180px;
+	margin-top: 50px;
 	padding-left: 0px;
 }
 
-.top-bar{
-	/*background: #323030; */
+.top-bar{ /*---HEADER (Logo and menu)---*/
 	display: flex;
 	align-items: center;
 	justify-content:space-between;
@@ -42,25 +44,26 @@ body{
 	height: 100px;
 }
 
-.menu{
+.menu{ /*---HEADER (Menu)---*/
 	display: flex;
 	list-style-type: none;
 	font-size: 20px;
 	font-weight: bold;
 }
 
-li{
-	padding-right: 180px;
+li h1{ /*---HEADER (style for the list of words)---*/
+	padding-right: 100px;
 	overflow: hidden;
 	color: #69D4C7;
 	
 }
 
-a:link{
+a:link{ /*---HEADER (remove decoration from header)---*/
 	text-decoration: none;
 }
 
-a:hover{
+a:hover{ /*---HEADER (hover color - Does not work)---*/
+	text-decoration-color: #E06CD9;
 	color: #E06CD9;
 }
 
@@ -165,27 +168,27 @@ a:hover{
 }
 
 /*---CONTENT MAIN PAGE (categories)---*/
-/* Column container */
-.rows {  
+
+.rows {  /*---Flex containers---*/
 	display: flex;
 	/*flex-wrap: wrap;*/	
 	align-items: stretch;
 	margin-top: 200px;
 }
 
-.rows > div{
+.rows > div{ /*---Flex containers 
+	(Centers the text in each container)---*/
   text-align: center;
 }
 
 
-
-.category-one img{
+/*---style for containers (all css elements is the exact same, but made seperate in case of independent design in each)---*/
+.category-one img{ 
 	height: 450px;
   	padding: 1rem;
   	position: relative;
 	border-radius: 100px;
 	border: 30px solid #945390;
-	
 }
 
 .category-two img{
@@ -205,9 +208,176 @@ a:hover{
 	
 }
 
+.category-text{ /*---TEXT styles---*/
+	color: #69D4C7;
+	margin-top: 10px;
+	font-size: 50px;
+}
 
+.category-footer{ /*---coloured line under text---*/
+	background-color: #945390;
+	padding: 5px;
+	margin-left: 180px;
+	margin-right: 180px;
+	margin-bottom: 100px;
+	margin-top: 5px;
+	border-radius: 50px;
+	mix-blend-mode: color-burn;
+}
 
+.about-rows {  /*---Flex containers---*/
+	display: flex;
+	/*flex-wrap: wrap;*/
+	align-items: stretch;
+	margin-top: 200px;
+}
 
+/*.about-rows > div{
+  text-align: center;
+}*/
 
+/* || ---About text (START)--- */
+.row-text{ /*---Container for text (needs about 2/3rd of the space)---*/
+	flex: 70%;
+}
+
+.row-text h1{ /*---Header styles for text container---*/
+	margin-left: 60px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	font-size: 40px;
+	color: #EBD788;
+}
+
+.row-text p{ /*---text styles for text container---*/
+	margin-left: 60px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-size: 20px;
+	color: #69D4C7;
+}
+/* || ---About text (END)--- */
+
+/* || ---Info box (START)--- */
+.me-row{ /*---Container for info box (needs about 1/3rd of the space)---*/
+	flex: 30%;
+	align-items: center;
+	margin-top: -20px; /* pushes the container up */
+}
+
+.me-row img{ /*---Image styling---*/
+	height: 300px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background: #222;
+  	color: white;
+  	padding: 10px;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+}
+
+.info-border{ /*---info box styling---*/
+	background: #E06CD9;
+	width: 300px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	border-right: solid 10px #222;
+	border-left: solid 10px #222;
+	border-bottom: solid 10px #222;
+}
+
+#pronouns-header, #alignment-header, #education-header{ /*---Header styling for info box---*/
+	padding-top: 20px;
+	color: #EBD788;
+	font-weight: bold;
+	font-style: italic;
+}
+
+#pronouns-text, #alignment-text{ /*---text styling for info box---*/
+	padding-top: 5px;
+	color: #4E1461;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.education{ /*---Pushes the list & list decoration to the left---*/
+	padding-left: 20px;
+	padding-top: 5px;
+}
+
+.education li{ /*---List styling for info box---*/
+	color: #4E1461;
+	font-weight: bold;
+	font-style: italic;
+}
+/* || ---Info box (END)--- */
+
+.form{ /*The entire form's content moved*/
+	margin-top: 200px;
+	margin-left: 100px;
+	
+}
+
+.form p{ /* Paragraph style - (effects all paragraphs under form class)*/
+	font-weight: bold;
+	font-size: 25px;
+	margin-bottom: 10px;
+	color: #EBD788;
+}
+
+.f-name{ /*--- First name area design ---*/
+	color: black;
+	border-radius: 10px;
+	padding: 15px;
+	background-color: #E06CD9;
+	border-color: rgba(223,112,114,0);
+	width: 300px;
+	margin-bottom: 20px;
+}
+
+.l-name{ /*--- Last name area design ---*/
+	color: black;
+	border-radius: 10px;
+	padding: 15px;
+	background-color: #E06CD9;
+	border-color: rgba(223,112,114,0);
+	width: 300px;
+	margin-bottom: 20px;
+}
+
+.m-text{ /*--- text area design---*/
+	color: black;
+	border-radius: 10px;
+	padding: 15px;
+	background-color: #E06CD9;
+	border-color: rgba(223,112,114,0);	
+}
+
+::placeholder{ /*--- Placholder text design ---*/
+	color: #945390;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.send-button{ /*--- Button design - only visual ---*/
+	background-color: #945390;
+	Border: 4px solid #3B0033;
+	border-radius: 50px;
+	width: 200px;
+	height: 50px;
+	text-align: center;
+	padding: 10px;
+	font-weight: bold;
+	color: #EBD788;
+	margin-top: 40px;
+	margin-left: 100px;
+}
 
 
